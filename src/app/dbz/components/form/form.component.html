@@ -1,0 +1,25 @@
+<h4>Agregar Personaje</h4>
+<form action="" class="row" (ngSubmit)="emitCharacter()">
+    <!-- Cuando el valor del input se modifique tambien va a cambiar el valor de la referencia en el archivo ts -->
+    <input 
+      type="text" 
+      [(ngModel)]="character.name"
+      name="name"
+      class="form-control mb-2" 
+      placeholder="Nombre del personaje"
+    >
+
+    <input 
+      type="number" 
+      [(ngModel)]="character.power"
+      name="power"
+      class="form-control mb-2" 
+      placeholder="Cantidad de poder"
+    >
+
+    <button  type="submit" class="btn btn-primary"> 
+        Agregar
+    </button>
+
+    <pre>{{ character | json }}</pre>
+</form>
